@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Instructor AI</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="../static/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../static/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../static/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../static/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="DSA AI" />
+    <link rel="manifest" href="../static/favicon/site.webmanifest" />
+</head>
+<body class="min-h-screen w-screen flex flex-col items-center justify-center p-0 m-0">
+    <div class="chat-header text-blue-600 w-full flex justify-between items-center py-4 px-8 fixed top-0 bg-white shadow-md">
+        <div class="flex items-center">
+            <a href="/"><img class="rounded-full size-16" src="../static/images/logo.png" alt="logo"/></a>
+            <div>
+                <h2 class="text-3xl font-bold leading-none font-[Nata Sans]">DSA instructor ai</h2>
+                <p>Logic is your superpower</p>
+            </div>
+        </div>
+        <a href="https://github.com/rishabhbishtuk12" target="_blank"><img class="rounded-full size-10" src="../static/images/github-logo.jpg" alt="GitHub Link" /></a>
+    </div>
+    <div class="chat-container w-full h-screen flex flex-col bg-gray-100 shadow-lg pt-24">
+        <div id="chat-box" class="chat-box flex-1 overflow-y-auto flex flex-col gap-4 p-5">
+                <p class="text-center p-2.5 font-[Nata Sans] font-semibold">Hello! I am your DSA Instructor. Ask me anything about Data Structures and Algorithms.</p>
+        </div>
+        <div class="chat-input flex py-8 px-4 sm:px-8 md:px-72">
+            <input type="text" id="user-input" autocomplete="on" placeholder="Ask anything about DSA" class="flex-1 px-4 py-2 bg-gray-300 text-black rounded-l-full focus:outline-none  transition" />
+            <button id="send-btn" class="p-2.5 bg-gray-300 text-white font-semibold rounded-r-full"><img src="../static/images/send.png" class="rounded-full size-9 bg-blue-600 p-2 hover:bg-blue-700 transition-color"/></button>
+            
+        </div>
+    </div>
+    <script src="../static/script.js"></script>
+</body>
+</html>
