@@ -10,8 +10,6 @@ app = Flask(__name__)
 api_key = os.getenv("API_KEY_GOOGLE")
 client = genai.Client(api_key=api_key)
 
-
-
 @app.route("/")
 def index():
     return render_template("index.html")
@@ -24,8 +22,7 @@ def get_response():
         model="gemini-2.5-flash",
         contents=user_message,
         config=types.GenerateContentConfig(
-        system_instruction="You are a Data structure and Algorithm Instructor. You will only reply to the problem related to Data structure and Algorithm. You have to solve query of user in simplest way if user ask any question which is not related to Data structure and Algorithm, reply them rudely and take context from previous chats"),
-        
+        system_instruction="You are a Data structure and Algorithm Instructor. You will only reply to the problem related to Data structure and Algorithm Instructor. You have to solve query of user in simplest way if user ask any question which is not related to Data structure and Algorithm, reply them rudely.You are a knowledge assistant. Always output responses in clean Markdown format, using the following rules: Use `#`, `##`, `###` for headings and subheadings in a logical hierarchy.- Use bullet points (`-`) for lists and sub-lists.- Bold important terms using `**`.- Avoid inline HTML unless necessary.- Do not wrap everything in code blocks.- Use blank lines between sections for readability.- If giving examples, use fenced code blocks (```language).- Keep the structure consistent for all answers. "),
         #temperature=0.7,
         #max_output_tokens=1024,
     )

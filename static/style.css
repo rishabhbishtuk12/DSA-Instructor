@@ -1,1 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&display=swap');
+/* AI message styling */
+.ai-message {
+    padding: 12px;
+    max-width: 80%;
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+}
+
+/* Headings */
+.ai-message h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.ai-message h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 12px;
+    margin-bottom: 6px;
+}
+
+.ai-message h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.ai-message h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 8px;
+    margin-bottom: 2px;
+}
+
+/* Lists */
+.ai-message ul {
+    padding-left: 20px;
+    margin: 6px 0;
+}
+
+.ai-message li {
+    margin-bottom: 4px;
+}
+/* Inline code */
+.ai-message code {
+    background-color: #e9ecef;
+    color: #d63384;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: Consolas, monospace;
+    font-size: 0.9em;
+}
+
+/* Code blocks */
+.ai-message pre {
+    background-color: #212529;
+    color: #f8f9fa;
+    padding: 10px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-family: Consolas, monospace;
+    font-size: 0.9em;
+    margin: 8px 0;
+}
+
+.ai-message pre code {
+    background: none;
+    color: inherit;
+    padding: 0;
+}
