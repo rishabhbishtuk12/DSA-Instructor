@@ -31,20 +31,20 @@
     <link rel="manifest" href="../static/favicon/site.webmanifest" />
 </head>
 <body class="min-h-screen w-screen flex flex-col items-center justify-center p-0 m-0">
-    <div class="chat-header text-blue-600 w-full flex justify-between items-center py-4 px-8 fixed top-0 bg-white shadow-md">
+    <div class="chat-header text-blue-600 w-full flex justify-between items-center py-4 md:px-6 px-2 fixed top-0 bg-white shadow-md">
         <div class="flex items-center">
-            <a href="/"><img class="rounded-full size-16" src="../static/images/logo.png" alt="logo"/></a>
+            <a href="/"><img class="sm:size-14 rounded-full size-10" src="../static/images/logo.png" alt="logo"/></a>
             <div class="select-none">
-                <h2 class="text-3xl font-bold leading-none">DSA instructor ai</h2>
-                <p>Logic is your superpower</p>
+                <h2 class="text-xl md:text-2xl md:text- font-bold leading-none">DSA instructor ai</h2>
+                <p class="text-xs md:text-l">Logic is your superpower</p>
             </div>
         </div>
-        <a href="https://github.com/rishabhbishtuk12" target="_blank"><img class="rounded-full size-10" src="../static/images/github-logo.jpg" alt="GitHub Link" /></a>
+        <a href="https://github.com/rishabhbishtuk12" target="_blank"><img class="rounded-full sm:size-10 size-8" src="../static/images/github-logo.jpg" alt="GitHub Link" /></a>
     </div>
     <div class="chat-container w-full h-screen flex flex-col bg-gray-100 shadow-lg pt-24 ">
         <div class="flex flex-col justify-between overflow-y-auto h-full relative">
                 <div id="chat-box"  class="px-5 pb-20 flex flex-col gap-4 scroll-smooth overflow-y-auto">
-                    <p class="text-center p-20 font-semibold text-3xl">What's the Query for today?
+                    <p class="text-center p-20 font-semibold md:text-4xl sm:md:text-3xl text-base">What's the Query for today?
                     </p>
                     <span id="bottom-box" class=" fixed bottom-0 w-full size-4 bg-gray-100 text-center"> </span>
                 </div>
