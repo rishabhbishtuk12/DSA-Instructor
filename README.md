@@ -2,6 +2,8 @@
 
 DSA-Instructor is a web-based AI chat application designed to help users with Data Structures and Algorithms (DSA) queries. Powered by Gemini AI, it provides clear, structured, and markdown-formatted solutions to DSA problems.
 
+![project gif](assets/dsa.gif)
+
 ## Features
 
 - *Interactive Chat Interface:* Ask any question related to Data Structures and Algorithms and get instant, well-formatted answers.
