@@ -99,3 +99,50 @@ img {
   pointer-events: none;
   transform: translateY(10px);
 }
+
+#send-btn{
+    position: absolute;
+    margin: 4px;
+    right: 0;
+    height: 40px;
+    width: 40px;
+    background-image: url(../static/images/send.png);
+    background-size: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #2563eb;
+    border: none;
+    border-radius: 50%; 
+}
+
+#send-btn:hover{
+    background-color:#3b82f6;
+    background-image: url(../static/images/send.png);
+    background-position: center;
+    background-size: 20px;
+    background-repeat: no-repeat;
+}
+
+#stop{
+    position: absolute;
+    margin: 4px;
+    right: 0;
+    height: 40px;
+    width: 40px;
+    border: none;
+    background-image: url(../static/images/stop.png);
+    background-position: center;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    border-radius: 50%; 
+    transition: all;
+}
+
+#stop:hover{
+    background: #e5e7eb;
+    background-image: url(../static/images/stop.png);
+    background-position: center;
+    background-size: 20px;
+    background-repeat: no-repeat;
+}
