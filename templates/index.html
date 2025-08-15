@@ -43,11 +43,42 @@
                     <p class="text-center p-20 font-semibold text-3xl">What's the Query for today?</p>
                     <span id="bottom-box" class=" fixed bottom-0 w-full size-4 bg-gray-100 text-center"> </span>
                 </div>
-                <div class="chat-input fixed bottom-0 flex justify-center pb-4 pt-2 px-8 md:px-72 w-full">
-                    <input type="text" id="user-input" placeholder="Ask anything about DSA" class="flex-1 px-4 py-2 bg-gray-300 text-black rounded-l-full focus:outline-none  transition" />
-                    <button id="send-btn" class="p-2.5 bg-gray-300 text-white font-semibold rounded-r-full"><img src="../static/images/send.png" class="rounded-full size-9 bg-blue-600 p-2 hover:bg-blue-700 transition-color"/></button>
-                </div>
-        </div>
+               
+
+      
+        <!-- Scroll to bottom button -->
+<button
+  id="scroll-btn"
+  class="opacity-0 pointer-events-none fixed bottom-20 right-4 bg-blue-600 text-white px-3 py-1 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300"
+>
+  ↓ 
+</button>
+
+
+        <div class="chat-input fixed bottom-0 left-1/2 -translate-x-1/2 z-10 w-full md:w-1/2 p-4 flex gap-2">
+  <div class="relative flex items-center flex-1">
+    <input
+      type="text"
+      id="user-input"
+      placeholder="Ask anything about DSA"
+      class="w-full px-4 py-3 bg-gray-300 text-gray-800 rounded-full focus:outline-none transition-all duration-300"
+    />
+    <button id="send-btn" class="absolute right-0 pr-1 bg-gray-300 rounded-full" type="button">
+      <img
+        src="../static/images/send.png"
+        alt="Send"
+        class="size-9 rounded-full bg-blue-500 p-2 hover:bg-blue-600 transition-colors duration-300"
+      />
+    </button>
+  </div>
+  <button
+    id="stop-btn"
+    class="bg-white text-white size-11 px-1 py-1 rounded-full shadow-lg hover:bg-gray-300 transition"
+  >
+  <image src="../static/images/stop.png" alt="Stop" class="size-9 rounded-full bg-w p-2 hover:bg-gry-300 transition-colors duration-300" />
+  </button>
+</div>
+
     </div>
     <script src="../static/script.js"></script>
 </body>

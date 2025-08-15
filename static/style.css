@@ -35,7 +35,13 @@
 }
 
 /* Lists */
+.ai-message ol {
+    list-style-type:decimal;
+    padding-left: 20px;
+    margin: 6px 0;
+}
 .ai-message ul {
+    list-style-type: disc;
     padding-left: 20px;
     margin: 6px 0;
 }
@@ -69,4 +75,27 @@
     background: none;
     color: inherit;
     padding: 0;
+}
+
+img {  
+   user-drag: none;  
+   user-select: none;
+   -moz-user-select: none;
+   -webkit-user-drag: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+}
+
+#scroll-btn {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+#scroll-btn.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+#scroll-btn.hide {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
 }
