@@ -4,8 +4,7 @@ from dotenv import load_dotenv
 load_dotenv()
 from flask import Flask, render_template, request, jsonify
 from google import genai
-from google.genai import types
-from google.genai.types import GenerateContentError
+from google.genai import types, errors
 import requests.exceptions
 
 # Configure logging
@@ -120,9 +119,19 @@ def get_response():
             logger.info(f"Successfully generated response for message length: {len(user_message)}")
             return jsonify({"response": response.text})
             
-        except GenerateContentError as e:
+        except errors.APIError as e:
             error_response = handle_api_error(e, len(user_message))
-            logger.error(f"GenerateContentError: {error_response['message']}")
+            logger.error(f"APIError: {error_response['message']}")
+            return jsonify(error_response), 500
+            
+        except errors.ClientError as e:
+            error_response = handle_api_error(e, len(user_message))
+            logger.error(f"ClientError: {error_response['message']}")
+            return jsonify(error_response), 400
+            
+        except errors.ServerError as e:
+            error_response = handle_api_error(e, len(user_message))
+            logger.error(f"ServerError: {error_response['message']}")
             return jsonify(error_response), 500
             
         except requests.exceptions.Timeout:
