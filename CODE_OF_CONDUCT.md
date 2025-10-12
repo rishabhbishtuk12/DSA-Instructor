@@ -36,7 +36,7 @@ This Code of Conduct applies within all community spaces, and also applies when 
 
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at rishabhbishtuk12@gmail.com or by contacting the DSA-Instructor maintainers. All complaints will be reviewed and investigated promptly and fairly.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at `rishabhbishtuk12@gmail.com` or by contacting the DSA-Instructor maintainers. All complaints will be reviewed and investigated promptly and fairly.
 
 All community leaders are obligated to respect the privacy and security of the reporter of any incident.
 
@@ -70,6 +70,6 @@ _Consequence_: A permanent ban from any sort of public interaction within the co
 
 ## Attribution
 
-This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org), version 2.1, available at https://www.contributor-covenant.org/version/2/1/code_of_conduct.html.
+This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org), version 2.1, available at `https://www.contributor-covenant.org/version/2/1/code_of_conduct.html`.
 
-For answers to common questions about this code of conduct, see https://www.contributor-covenant.org/faq. Translations are available at https://www.contributor-covenant.org/translations.
+For answers to common questions about this code of conduct, see `https://www.contributor-covenant.org/faq`. Translations are available at `https://www.contributor-covenant.org/translations`.
