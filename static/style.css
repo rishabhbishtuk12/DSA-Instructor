@@ -146,3 +146,34 @@ img {
     background-size: 20px;
     background-repeat: no-repeat;
 }
+
+/* Error message styling */
+.error-message {
+    border-left: 4px solid #ef4444 !important;
+    background-color: #fef2f2 !important;
+    padding: 12px !important;
+    border-radius: 8px !important;
+    margin: 8px 0 !important;
+}
+
+.error-message p {
+    margin: 0 !important;
+    color: #dc2626 !important;
+    font-weight: 500 !important;
+}
+
+.error-message button {
+    margin-top: 8px;
+    padding: 6px 12px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.error-message button:hover {
+    background-color: #1d4ed8;
+}
