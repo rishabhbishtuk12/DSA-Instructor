@@ -8,15 +8,28 @@
   "commitConvention": "angular",
   "contributors": [
     {
+      "login": "rishabhbishtuk12",
+      "name": "Rishabh Bisht",
+      "avatar_url": "https://avatars.githubusercontent.com/u/224134759?v=4",
+      "profile": "https://github.com/rishabhbishtuk12",
+      "contributions": [
+        "code",
+        "bug",
+        "ideas",
+        "maintenance",
+        "review"
+      ]
+    }, 
+    {
       "login": "kapilsinghnegi",
       "name": "Kapil Singh Negi ",
       "avatar_url": "https://avatars.githubusercontent.com/u/124447041?v=4",
       "profile": "https://github.com/kapilsinghnegi",
       "contributions": [
         "ideas",
-        "projectManagement",
+        "projectManagement", 
         "review"
-      ]
+        ]
     }
   ],
   "contributorsPerLine": 7,

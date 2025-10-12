@@ -62,6 +62,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tbody>
     <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/rishabhbishtuk12"><img src="https://avatars.githubusercontent.com/u/224134759?v=4?s=100" width="100px;" alt="Rishabh Bisht"/><br /><sub><b>Rishabh Bisht</b></sub></a><br /><a href="https://github.com/rishabhbishtuk12/DSA-Instructor/commits?author=rishabhbishtuk12" title="Code">💻</a> <a href="https://github.com/rishabhbishtuk12/DSA-Instructor/issues?q=author%3Arishabhbishtuk12" title="Bug reports">🐛</a> <a href="#ideas-rishabhbishtuk12" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-rishabhbishtuk12" title="Maintenance">🚧</a> <a href="https://github.com/rishabhbishtuk12/DSA-Instructor/pulls?q=is%3Apr+reviewed-by%3Arishabhbishtuk12" title="Reviewed Pull Requests">👀</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/kapilsinghnegi"><img src="https://avatars.githubusercontent.com/u/124447041?v=4?s=100" width="100px;" alt="Kapil Singh Negi "/><br /><sub><b>Kapil Singh Negi </b></sub></a><br /><a href="#ideas-kapilsinghnegi" title="Ideas, Planning, & Feedback">🤔</a> <a href="#projectManagement-kapilsinghnegi" title="Project Management">📆</a> <a href="https://github.com/rishabhbishtuk12/DSA-Instructor/pulls?q=is%3Apr+reviewed-by%3Akapilsinghnegi" title="Reviewed Pull Requests">👀</a></td>
     </tr>
   </tbody>
