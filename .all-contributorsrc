@@ -42,6 +42,16 @@
         "doc",
         "bug"
       ]
+    },
+    {
+      "login": "asmasayed",
+      "name": "Asma Sayed",
+      "avatar_url": "https://avatars.githubusercontent.com/u/177089214?v=4",
+      "profile": "https://github.com/asmasayed",
+      "contributions": [
+        "doc",
+        "example"
+      ]
     }
   ],
   "contributorsPerLine": 7,
