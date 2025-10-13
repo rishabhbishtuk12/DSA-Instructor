@@ -82,8 +82,46 @@ document.addEventListener("DOMContentLoaded", () => {
     getAIResponse(userText);
   }
 
+  function getErrorMessage(errorData) {
+    // Return user-friendly message if available, otherwise fallback to generic message
+    return errorData.user_friendly || errorData.message || "An unexpected error occurred. Please try again.";
+  }
+
+  function showErrorWithRetry(errorMessage, errorType) {
+    const messageDiv = document.createElement("div");
+    messageDiv.classList.add("self-start", "ai-message", "error-message");
+    messageDiv.style.borderLeft = "4px solid #ef4444";
+    messageDiv.style.backgroundColor = "#fef2f2";
+    messageDiv.style.padding = "12px";
+    messageDiv.style.borderRadius = "8px";
+    
+    let retryButton = "";
+    if (errorType === "network_error" || errorType === "timeout_error" || errorType === "service_unavailable") {
+      retryButton = `<button onclick="retryLastMessage()" class="mt-2 px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">Retry</button>`;
+    }
+    
+    messageDiv.innerHTML = `
+      <div class="flex items-start">
+        <i class="ri-error-warning-line text-red-500 mr-2 mt-1"></i>
+        <div>
+          <p class="text-red-800 font-medium">${errorMessage}</p>
+          ${retryButton}
+        </div>
+      </div>
+    `;
+    
+    chatBox.appendChild(messageDiv);
+    
+    if (autoScrollEnabled) {
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+  }
+
+  let lastUserMessage = "";
+
   async function getAIResponse(userText) {
     toggleButtons(true); // show stop button
+    lastUserMessage = userText; // Store for retry functionality
 
     try {
       const response = await fetch("/get_response", {
@@ -93,8 +131,17 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       const data = await response.json();
-      const aiText = data.response;
 
+      // Check if response contains an error
+      if (!response.ok || data.error) {
+        const errorMessage = getErrorMessage(data);
+        showErrorWithRetry(errorMessage, data.error);
+        toggleButtons(false);
+        return;
+      }
+
+      // Success case - display AI response
+      const aiText = data.response;
       const messageDiv = document.createElement("div");
       messageDiv.classList.add("self-start", "ai-message");
       chatBox.appendChild(messageDiv);
@@ -116,14 +163,26 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }, 5);
     } catch (error) {
-      console.error("Error:", error);
-      appendMessage(
-        "Sorry, something went wrong. Please try again.",
-        "ai-message"
+      console.error("Network error:", error);
+      showErrorWithRetry(
+        "Network error. Please check your internet connection and try again.",
+        "network_error"
       );
       toggleButtons(false);
     }
   }
+
+  // Retry functionality
+  window.retryLastMessage = function() {
+    if (lastUserMessage) {
+      // Remove any existing error messages
+      const errorMessages = document.querySelectorAll('.error-message');
+      errorMessages.forEach(msg => msg.remove());
+      
+      // Retry the last message
+      getAIResponse(lastUserMessage);
+    }
+  };
 
   // Send button click
   sendBtn.addEventListener("click", sendMessage);

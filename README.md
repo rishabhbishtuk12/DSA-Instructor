@@ -22,6 +22,8 @@ Welcome to _DSA-Instructor_ - a web-based AI chat application designed to help u
 - AI-Powered Solutions: Utilizes Gemini AI to generate concise explanations and code samples.
 - Markdown Support: Responses are provided in clean Markdown with headings, lists, bolding, and code blocks for clarity.
 - User-Friendly UI: Modern, responsive design with smooth chat experience.
+- **Robust Error Handling**: Comprehensive error handling for API failures, network issues, and invalid requests with user-friendly error messages and retry functionality.
+- **Logging & Monitoring**: Built-in logging system for debugging and monitoring application health.
 
 ## 🚀 Quick Start
 
@@ -51,6 +53,41 @@ Welcome to _DSA-Instructor_ - a web-based AI chat application designed to help u
 ```
 
 5 Open your browser and go to `http://localhost:5000`.
+
+## 🔧 Troubleshooting
+
+### Common Issues and Solutions
+
+**API Key Issues:**
+- **Error**: "Invalid API configuration. Please contact support."
+- **Solution**: Ensure your `API_KEY_GOOGLE` is correctly set in the `.env` file and is valid.
+
+**Rate Limiting:**
+- **Error**: "Rate limit exceeded. Please wait a moment before trying again."
+- **Solution**: Wait a few minutes before making new requests. Consider upgrading your API plan if this persists.
+
+**Network Issues:**
+- **Error**: "Network error. Please check your connection and try again."
+- **Solution**: Check your internet connection and try the retry button.
+
+**Service Unavailable:**
+- **Error**: "API service is temporarily unavailable. Please try again in a few minutes."
+- **Solution**: The Gemini API service may be experiencing downtime. Wait and retry.
+
+### Logging
+
+The application logs all activities to `app.log` and the console. Check these logs for detailed error information:
+- **Authentication errors**: Invalid API key issues
+- **Rate limiting**: API quota exceeded
+- **Network errors**: Connection timeouts and failures
+- **Service errors**: API service unavailability
+
+### Testing Error Handling
+
+Run the included test script to verify error handling:
+```bash
+python test_error_handling.py
+```
 
 ## Project Structure
 
