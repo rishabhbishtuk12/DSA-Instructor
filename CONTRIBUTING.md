@@ -5,24 +5,33 @@ Thank you for considering contributing to DSA-Instructor! We welcome contributio
 ## How to Contribute
 
 1. **Fork the repository**: Click the "Fork" button at the top right of the repository page.
+
 2. **Clone your forked repository**:
+
    ```sh
    git clone https://github.com/<your-github-username>/DSA-Instructor.git
    ```
+
 3. **Create a branch**:
+
    ```sh
    git checkout -b <your-branch-name>
    ```
+
 4. **Make your changes**: Implement your feature, fix a bug, or update documentation.
 5. **Commit your changes**:
+
    ```sh
    git add .
    git commit -m "Description of your changes"
    ```
+
 6. **Push to your fork**:
+
    ```sh
    git push origin <your-branch-name>
    ```
+
 7. **Create a Pull Request**: Go to the original repository and click "New Pull Request".
 8. Congratulations! 🎉 You've made your contribution to DSA-Instructor.
 
@@ -51,7 +60,7 @@ When submitting a pull request, please follow these guidelines:
 
 ## Contact
 
-If you have any questions or need help, feel free to contact us at rishabhbishtuk12@gmail.com.
+If you have any questions or need help, feel free to contact us at `rishabhbishtuk12@gmail.com`.
 
 ## Documentation
 
