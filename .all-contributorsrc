@@ -19,7 +19,7 @@
         "maintenance",
         "review"
       ]
-    }, 
+    },
     {
       "login": "kapilsinghnegi",
       "name": "Kapil Singh Negi ",
@@ -27,9 +27,21 @@
       "profile": "https://github.com/kapilsinghnegi",
       "contributions": [
         "ideas",
-        "projectManagement", 
+        "projectManagement",
         "review"
-        ]
+      ]
+    },
+    {
+      "login": "Shreyanshsingh23",
+      "name": "Shreyansh Singh Gautam",
+      "avatar_url": "https://avatars.githubusercontent.com/u/149963387?v=4",
+      "profile": "https://github.com/Shreyanshsingh23",
+      "contributions": [
+        "code",
+        "test",
+        "doc",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
