@@ -40,19 +40,25 @@ Welcome to _DSA-Instructor_ - a web-based AI chat application designed to help u
    pip install -r requirements.txt
 ```
 
-3 Set up your Google Gemini API key in a .env file:
+3 Set up environment variables by creating your local file from the example:
+
+```bash
+   cp .env.example .env
+```
+
+4 Add your Google Gemini API key in the .env file:
 
 ```bash
    API_KEY_GOOGLE=your_gemini_api_key
 ```
 
-4 Run the application:
+5 Run the application:
 
 ```bash
    python app.py
 ```
 
-5 Open your browser and go to `http://localhost:5000`.
+6 Open your browser and go to `http://localhost:5000`.
 
 ## 🔧 Troubleshooting
 
