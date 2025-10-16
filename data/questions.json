@@ -1,0 +1,17 @@
+[
+  { "id": 1, "question": "Find the maximum subarray sum (Kadane's Algorithm)" },
+  { "id": 2, "question": "Implement a binary search function" },
+  { "id": 3, "question": "Reverse a linked list iteratively and recursively" },
+  { "id": 4, "question": "Find the middle element of a linked list" },
+  { "id": 5, "question": "Detect a cycle in a linked list using Floyd’s algorithm" },
+  { "id": 6, "question": "Merge two sorted arrays without using extra space" },
+  { "id": 7, "question": "Implement a stack using queues" },
+  { "id": 8, "question": "Perform level order traversal on a binary tree" },
+  { "id": 9, "question": "Find the height of a binary tree" },
+  { "id": 10, "question": "Check if two binary trees are identical" },
+  { "id": 11, "question": "Find the shortest path in an unweighted graph (BFS)" },
+  { "id": 12, "question": "Implement quicksort algorithm" },
+  { "id": 13, "question": "Find the nth Fibonacci number using DP" },
+  { "id": 14, "question": "Solve the 0/1 Knapsack problem" },
+  { "id": 15, "question": "Find the lowest common ancestor (LCA) in a binary tree" }
+]
