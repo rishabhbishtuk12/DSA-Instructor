@@ -52,6 +52,15 @@
         "doc",
         "example"
       ]
+    },
+    {
+      "login": "gaurang-2305",
+      "name": "gaurang-2305",
+      "avatar_url": "https://avatars.githubusercontent.com/u/199749300?v=4",
+      "profile": "https://github.com/gaurang-2305",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
