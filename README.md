@@ -1,6 +1,13 @@
+
+<p align="center">
+  <img src="static/images/logo.png" alt="DSA-Instructor Logo" width="150" height="150">
+</p>
+<p align="center">
+
 # DSA-Instructor
 
-<p>
+</p>
+<p align="center">
   <img src="https://img.shields.io/github/stars/rishabhbishtuk12/DSA-Instructor?style=for-the-badge" alt="Stars">
   <img src="https://img.shields.io/github/forks/rishabhbishtuk12/DSA-Instructor?style=for-the-badge" alt="Forks">
   <img src="https://img.shields.io/github/issues/rishabhbishtuk12/DSA-Instructor?style=for-the-badge" alt="Open Issues">
@@ -12,9 +19,16 @@
   </a>
 </p>
 
+<p align="center">
+  <em>A web-based AI chat application that helps users learn and solve Data Structures & Algorithms (DSA) problems, powered by Gemini AI.</em>
+</p>
+
+---
 Welcome to _DSA-Instructor_ - a web-based AI chat application designed to help users learn and solve Data Structures and Algorithms (DSA) queries. Powered by Gemini AI, it provides clear, structured, and markdown-formatted solutions to DSA problems.
 
-![project gif](assets/dsa.gif)
+<p align="center">
+  <img src="assets/dsa.gif" alt="Project Demo" width="600">
+</p>
 
 ## Features
 
