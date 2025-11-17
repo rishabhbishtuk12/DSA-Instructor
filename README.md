@@ -1,4 +1,10 @@
-# DSA-Instructor
+# 🚀 DSA-Instructor — AI-Powered DSA Chat Assistant
+
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
+[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <p>
   <img src="https://img.shields.io/github/stars/rishabhbishtuk12/DSA-Instructor?style=for-the-badge" alt="Stars">
@@ -12,77 +18,193 @@
   </a>
 </p>
 
-Welcome to _DSA-Instructor_ - a web-based AI chat application designed to help users learn and solve Data Structures and Algorithms (DSA) queries. Powered by Gemini AI, it provides clear, structured, and markdown-formatted solutions to DSA problems.
+**DSA-Instructor** is a full-stack AI-powered learning assistant built to simplify **Data Structures & Algorithms** learning using **Google Gemini AI**.
+
+It provides well-structured answers, clean markdown formatting, explanations, code snippets, error-handling, and a modern chat interface built with **React + Vite + TailwindCSS**.
+
+---
 
 ![project gif](assets/dsa.gif)
 
-## Features
+---
 
-- Interactive Chat Interface: Ask any question related to Data Structures and Algorithms and get instant, well-formatted answers.
-- AI-Powered Solutions: Utilizes Gemini AI to generate concise explanations and code samples.
-- Markdown Support: Responses are provided in clean Markdown with headings, lists, bolding, and code blocks for clarity.
-- User-Friendly UI: Modern, responsive design with smooth chat experience.
-- **Robust Error Handling**: Comprehensive error handling for API failures, network issues, and invalid requests with user-friendly error messages and retry functionality.
-- **Logging & Monitoring**: Built-in logging system for debugging and monitoring application health.
+## ✨ Features
 
-## 🚀 Quick Start
+### 🧠 AI-Powered DSA Explanations
 
-1 Clone the repository:
+- Uses **Google Gemini** to generate accurate DSA explanations.
+- Provides structured output with headings, code blocks, lists, and examples.
+
+### 💬 Interactive Chat UI
+
+- Real-time typing animation
+- “Thinking…” bubble animation
+- Stop generation button
+- Auto-scroll + scroll-to-bottom button
+- Smooth & responsive Tailwind UI
+- Syntax highlighting for code
+
+### 🔒 Authentication
+
+- JWT-based Login & Register
+- Secure storage
+
+### ⚙️ Backend with Flask
+
+- Complete API handling
+- Error classification (network, rate limit, bad request, etc.)
+- Logging, monitoring, and consistent error responses
+- Modular code structure: routes, services, utils, models
+
+### 🗄 MongoDB Integration
+
+- Fully connected auth system
+- User storage
+- Scalable structure
+
+### ⚡ Error Handling
+
+- Friendly UI messages
+- Retry button
+- Stops AI typing instantly
+- Bubble shows reasons & suggestions
+
+---
+
+## 📦 Tech Stack
+
+### **Frontend**
+
+- React 18
+- Vite
+- TailwindCSS 4.1
+- Highlight.js
+- Marked.js (Markdown parser)
+- React Icons
+
+### **Backend**
+
+- Python
+- Flask
+- JWT Authentication
+- MongoDB + pymongo
+- Google Gemini API
+- Python-dotenv
+- Error-handling architecture
+
+---
+
+## 🚀 Installation & Setup
+
+### 1. Clone the Repository
 
 ```bash
    git clone https://github.com/rishabhbishtuk12/DSA-Instructor.git
    cd DSA-Instructor
 ```
 
-2 Install dependencies:
+### 2. Backend Setup (Flask)
+
+Navigate to /backend folder:
 
 ```bash
-   pip install -r requirements.txt
+cd backend
 ```
 
-3 Set up environment variables by creating your local file from the example:
+#### a. Install backend dependencies
 
 ```bash
-   cp .env.example .env
+  pip install -r requirements.txt
 ```
 
-4 Add your Google Gemini API key in the .env file:
+### c. Setup your .env file
 
 ```bash
-   API_KEY_GOOGLE=your_gemini_api_key
+cp .env.example .env
 ```
 
-5 Run the application:
+Add:
+
+```bash
+API_KEY_GOOGLE=your_gemini_api_key
+MONGO_URI=your_mongodb_uri
+JWT_SECRET=your_secret
+```
+
+### d. Start Flask Backend
 
 ```bash
    python app.py
 ```
 
-6 Open your browser and go to `http://localhost:5000`.
+Backend runs on:
+
+```bash
+http://127.0.0.1:8000
+```
+
+### 3. Frontend Setup (React + Vite)
+
+Navigate to /frontend folder:
+
+```bash
+cd frontend
+```
+
+### a. Install frontend dependencies
+
+```bash
+  npm install
+```
+
+### b. Setup your .env file
+
+Create:
+
+```bash
+VITE_API_BASE=http://127.0.0.1:8000
+```
+
+### c. Run Vite Server
+
+```bash
+   npm run dev
+```
+
+Frontend runs on:
+
+```bash
+http://localhost:5173
+```
 
 ## 🔧 Troubleshooting
 
 ### Common Issues and Solutions
 
 **API Key Issues:**
+
 - **Error**: "Invalid API configuration. Please contact support."
 - **Solution**: Ensure your `API_KEY_GOOGLE` is correctly set in the `.env` file and is valid.
 
 **Rate Limiting:**
+
 - **Error**: "Rate limit exceeded. Please wait a moment before trying again."
 - **Solution**: Wait a few minutes before making new requests. Consider upgrading your API plan if this persists.
 
 **Network Issues:**
+
 - **Error**: "Network error. Please check your connection and try again."
 - **Solution**: Check your internet connection and try the retry button.
 
 **Service Unavailable:**
+
 - **Error**: "API service is temporarily unavailable. Please try again in a few minutes."
 - **Solution**: The Gemini API service may be experiencing downtime. Wait and retry.
 
 ### Logging
 
 The application logs all activities to `app.log` and the console. Check these logs for detailed error information:
+
 - **Authentication errors**: Invalid API key issues
 - **Rate limiting**: API quota exceeded
 - **Network errors**: Connection timeouts and failures
@@ -91,18 +213,48 @@ The application logs all activities to `app.log` and the console. Check these lo
 ### Testing Error Handling
 
 Run the included test script to verify error handling:
+
 ```bash
-python test_error_handling.py
+cd backend && python test_error_handling.py
 ```
 
 ## Project Structure
 
-- app.py - Flask backend serving the chat interface and integrating Gemini AI.
-- templates/ - HTML templates for the frontend.
-- static/ - Contains CSS, JS, and image assets.
-- CONTRIBUTING.md — Guidelines for contributing
-- CODE_OF_CONDUCT.md — Community guidelines and expectations
-- LICENSE — Project license (MIT)
+```sql
+DSA-Instructor/
+│
+├── backend/
+│   ├── app.py
+│   ├── models/
+│   ├── routes/
+│   ├── services/
+│   ├── utils/
+│   ├── config.py
+│   ├── requirements.txt
+│   └── test_error_handling.py
+│
+├── frontend/
+│   ├── src/
+│   │   ├── pages/
+│   │   │   └── Dashboard.jsx
+│   │   │   └── Login.jsx
+│   │   │   └── Register.jsx
+│   │   ├── api/
+│   │   ├── components/
+│   │   └── context/
+│   │   ├── hooks/
+│   │   ├── services/
+│   ├── public/
+│   ├── index.html
+│   └── package.json
+│
+├── assets/
+│   └── dsa.gif
+│
+├── README.md
+├── LICENSE
+└── CONTRIBUTING.md
+```
 
 ## 🌱 Contributing
 
@@ -112,7 +264,11 @@ Please first read:
 - [CONTRIBUTING.md](./CONTRIBUTING.md) — how to contribute to this project
 - [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) — community rules & etiquette
 
-### Here’s how you can get started:
+### ⭐ Example Queries
+
+- “Explain merge sort in the simplest way.”
+- “How does BFS differ from DFS?”
+- “Give me optimized code for binary search in Python.”
 
 - Browse open issues — look for labels like good first issue or help wanted
 - Discuss before large changes — open an issue to propose your idea so maintainers and community can give feedback
@@ -146,8 +302,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/rishabhbishtuk12"><img src="https://avatars.githubusercontent.com/u/224134759?v=4?s=100" width="100px;" alt="Rishabh Bisht"/><br /><sub><b>Rishabh Bisht</b></sub></a><br /><a href="https://github.com/rishabhbishtuk12/DSA-Instructor/commits?author=rishabhbishtuk12" title="Code">💻</a> <a href="https://github.com/rishabhbishtuk12/DSA-Instructor/issues?q=author%3Arishabhbishtuk12" title="Bug reports">🐛</a> <a href="#ideas-rishabhbishtuk12" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-rishabhbishtuk12" title="Maintenance">🚧</a> <a href="https://github.com/rishabhbishtuk12/DSA-Instructor/pulls?q=is%3Apr+reviewed-by%3Arishabhbishtuk12" title="Reviewed Pull Requests">👀</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/kapilsinghnegi"><img src="https://avatars.githubusercontent.com/u/124447041?v=4?s=100" width="100px;" alt="Kapil Singh Negi "/><br /><sub><b>Kapil Singh Negi </b></sub></a><br /><a href="#ideas-kapilsinghnegi" title="Ideas, Planning, & Feedback">🤔</a> <a href="#projectManagement-kapilsinghnegi" title="Project Management">📆</a> <a href="https://github.com/rishabhbishtuk12/DSA-Instructor/pulls?q=is%3Apr+reviewed-by%3Akapilsinghnegi" title="Reviewed Pull Requests">👀</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/rishabhbishtuk12"><img src="https://avatars.githubusercontent.com/u/224134759?v=4?s=100" width="100px;" alt="Rishabh Bisht"/><br /><sub><b>Rishabh Bisht</b></sub></a><br /><a href="https://github.com/rishabhbishtuk12/DSA-Instructor/commits?author=rishabhbishtuk12" title="Code">💻</a> <a href="https://github.com/rishabhbishtuk12/DSA-Instructor/issues?q=author%3Arishabhbishtuk12" title="Bug reports">🐛</a> <a href="#ideas-rishabhbishtuk12" title="Ideas, Planning, & Feedback">🤔</a> <a href="#projectManagement-rishabhbishtuk12" title="Project Management">📆</a> <a href="https://github.com/rishabhbishtuk12/DSA-Instructor/pulls?q=is%3Apr+reviewed-by%3Arishabhbishtuk12" title="Reviewed Pull Requests">👀</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/kapilsinghnegi"><img src="https://avatars.githubusercontent.com/u/124447041?v=4?s=100" width="100px;" alt="Kapil Singh Negi "/><br /><sub><b>Kapil Singh Negi </b></sub></a><br /><a href="https://github.com/rishabhbishtuk12/DSA-Instructor/commits?author=kapilsinghnegi" title="Code">💻</a> <a href="https://github.com/rishabhbishtuk12/DSA-Instructor/issues?q=author%3Akapilsinghnegi" title="Bug reports">🐛</a> <a href="#ideas-kapilsinghnegi" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-kapilsinghnegi" title="Maintenance">🚧</a> <a href="https://github.com/rishabhbishtuk12/DSA-Instructor/pulls?q=is%3Apr+reviewed-by%3Akapilsinghnegi" title="Reviewed Pull Requests">👀</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Shreyanshsingh23"><img src="https://avatars.githubusercontent.com/u/149963387?v=4?s=100" width="100px;" alt="Shreyansh Singh Gautam"/><br /><sub><b>Shreyansh Singh Gautam</b></sub></a><br /><a href="https://github.com/rishabhbishtuk12/DSA-Instructor/commits?author=Shreyanshsingh23" title="Code">💻</a> <a href="https://github.com/rishabhbishtuk12/DSA-Instructor/commits?author=Shreyanshsingh23" title="Tests">⚠️</a> <a href="https://github.com/rishabhbishtuk12/DSA-Instructor/commits?author=Shreyanshsingh23" title="Documentation">📖</a> <a href="https://github.com/rishabhbishtuk12/DSA-Instructor/issues?q=author%3AShreyanshsingh23" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/asmasayed"><img src="https://avatars.githubusercontent.com/u/177089214?v=4?s=100" width="100px;" alt="Asma Sayed"/><br /><sub><b>Asma Sayed</b></sub></a><br /><a href="https://github.com/rishabhbishtuk12/DSA-Instructor/commits?author=asmasayed" title="Documentation">📖</a> <a href="#example-asmasayed" title="Examples">💡</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/gaurang-2305"><img src="https://avatars.githubusercontent.com/u/199749300?v=4?s=100" width="100px;" alt="gaurang-2305"/><br /><sub><b>gaurang-2305</b></sub></a><br /><a href="https://github.com/rishabhbishtuk12/DSA-Instructor/commits?author=gaurang-2305" title="Documentation">📖</a></td>
@@ -165,3 +321,8 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 ## ⚖ License & Legal
 
 This project is licensed under the MIT License. See [LICENCE](./LICENSE) for details.
+
+## ❤️ Thank You
+
+If you like this project, give it a star ⭐
+Your support motivates continuous updates & improvements.

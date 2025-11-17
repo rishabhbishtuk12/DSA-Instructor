@@ -16,7 +16,7 @@
         "code",
         "bug",
         "ideas",
-        "maintenance",
+        "projectManagement",
         "review"
       ]
     },
@@ -26,8 +26,10 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/124447041?v=4",
       "profile": "https://github.com/kapilsinghnegi",
       "contributions": [
+        "code",
+        "bug",
         "ideas",
-        "projectManagement",
+        "maintenance",
         "review"
       ]
     },

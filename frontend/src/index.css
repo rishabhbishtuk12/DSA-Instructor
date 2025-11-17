@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+.input {
+  @apply w-full px-3 py-2 border border-sky-500 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500;
+}
+.btn-primary {
+  @apply px-4 py-2 text-white rounded-md bg-sky-600 hover:bg-sky-700;
+}
+
+/* AI message styling */
+/* Headings */
+.ai-message h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.ai-message h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 12px;
+  margin-bottom: 6px;
+}
+
+.ai-message h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+.ai-message h4 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 8px;
+  margin-bottom: 2px;
+}
+
+/* Lists */
+.ai-message ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+  margin: 6px 0;
+}
+.ai-message ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 6px 0;
+}
+
+.ai-message li {
+  margin-bottom: 4px;
+}
+/* Inline code */
+.ai-message code {
+  background-color: #e9ecef;
+  color: #d63384;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: Consolas, monospace;
+  font-size: 0.9em;
+}
+
+/* Code blocks */
+.ai-message pre {
+  background-color: #212529;
+  color: #f8f9fa;
+  padding: 10px;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-family: Consolas, monospace;
+  font-size: 0.9em;
+  margin: 8px 0;
+}
+
+.ai-message pre code {
+  background: none;
+  color: inherit;
+  padding: 0;
+}
+
+img {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+#scroll-btn {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+#scroll-btn.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+#scroll-btn.hide {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+}
+
+#send-btn:hover {
+  background-color: #3b82f6;
+  background-image: url(../images/send.png);
+  background-position: center;
+  background-size: 20px;
+  background-repeat: no-repeat;
+}
+
+/* #stop {
+  position: absolute;
+  margin: 4px;
+  right: 0;
+  height: 40px;
+  width: 40px;
+  border: none;
+  background-image: url(../images/stop.png);
+  background-position: center;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: all;
+} */
+
+/* #stop:hover {
+  background: #e5e7eb;
+  background-image: url(../images/stop.png);
+  background-position: center;
+  background-size: 20px;
+  background-repeat: no-repeat;
+} */
+
+/* Error message styling */
+.error-message {
+  border-left: 4px solid #ef4444 !important;
+  background-color: #fef2f2 !important;
+  padding: 12px !important;
+  border-radius: 8px !important;
+  margin: 8px 0 !important;
+}
+
+.error-message p {
+  margin: 0 !important;
+  color: #dc2626 !important;
+  font-weight: 500 !important;
+}
+
+.error-message button {
+  margin-top: 8px;
+  padding: 6px 12px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.error-message button:hover {
+  background-color: #1d4ed8;
+}
